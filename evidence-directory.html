@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>The Open Evidence Directory — Scalar</title>
+<meta name="description" content="Every peer-reviewed study behind the scalar plasma projector's modality — free, public, in one place. No paywall.">
+<meta name="theme-color" content="#0A0610">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cosmos:#0A0610;--bg:#070410;--plasma:#6B2BD6;--cyan:#00E5FF;--gold:#FFB800;--text:#ECE6F5;--muted:#9A8FB5;
+    --glass:rgba(20,12,34,.74);--stroke:rgba(255,255,255,.14);--stroke2:rgba(255,255,255,.07);--ok:#46d39a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;min-height:100vh}
+  .cinzel{font-family:Cinzel,serif} .mono{font-family:'Space Mono',monospace}
+  a{color:inherit;text-decoration:none}
+  .bgvid{position:fixed;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) brightness(.55)}
+  .veil{position:fixed;inset:0;z-index:1;background:radial-gradient(135% 100% at 50% 24%,rgba(10,6,16,.5),rgba(7,4,16,.9) 70%,rgba(7,4,16,.97) 100%)}
+  .menubar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:14px;height:46px;padding:0 18px;
+    background:rgba(10,6,16,.7);backdrop-filter:blur(18px);border-bottom:1px solid var(--stroke2);font-family:'Space Mono',monospace;font-size:13px}
+  .brand{display:flex;align-items:center;gap:9px;font-family:Cinzel;font-weight:700;font-size:14px}
+  .orb{width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff,var(--cyan) 28%,var(--plasma) 70%,#2a0e5c);box-shadow:0 0 12px rgba(107,43,214,.6)}
+  .menubar .sp{flex:1} .back{color:var(--cyan);cursor:pointer}
+  .wrap{position:relative;z-index:5;max-width:880px;margin:0 auto;padding:40px 22px 80px}
+  .eyebrow{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan)}
+  h1{font-family:Cinzel;font-weight:700;font-size:clamp(2rem,5vw,3rem);margin:12px 0;line-height:1.05;
+    background:linear-gradient(150deg,#fff 30%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-size:1.1rem;color:#e6e0f2;max-width:62ch} .lede strong{color:#fff}
+  .strip{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 8px}
+  .chip{font-family:'Space Mono',monospace;font-size:12px;color:var(--gold);border:1px solid var(--stroke);border-radius:999px;padding:7px 14px}
+  .grp{margin-top:38px}
+  .grp h2{font-family:Cinzel;font-size:1.35rem;color:#fff;margin-bottom:4px}
+  .grp .cnt{font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--stroke2)}
+  .study{display:block;background:rgba(255,255,255,.04);border:1px solid var(--stroke);border-left:2px solid var(--plasma);border-radius:12px;
+    padding:16px 18px;margin-bottom:10px;transition:.16s}
+  .study:hover{border-left-color:var(--cyan);background:rgba(255,255,255,.07);transform:translateX(3px)}
+  .study .t{font-weight:500;font-size:15px;color:#fff;line-height:1.35;margin-bottom:6px}
+  .study .m{font-family:'Space Mono',monospace;font-size:11.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .study .jr{color:var(--cyan)} .free{color:var(--ok);border:1px solid rgba(70,211,154,.3);border-radius:999px;padding:2px 8px;font-size:10px}
+  .doi{color:var(--gold)}
+  footer{position:relative;z-index:5;text-align:center;color:var(--muted);font-size:.85rem;padding:0 22px 60px;max-width:880px;margin:0 auto}
+</style>
+</head>
+<body>
+<video class="bgvid" autoplay muted loop playsinline poster="assets/bg-poster.jpeg"><source src="assets/bg.mp4" type="video/mp4"></video>
+<div class="veil"></div>
+
+<div class="menubar">
+  <span class="brand"><span class="orb"></span> THE OPEN EVIDENCE</span>
+  <span class="sp"></span>
+  <a class="back" href="index.html">← back to Scalar OS</a>
+</div>
+
+<div class="wrap">
+  <p class="eyebrow">Free · open · no paywall</p>
+  <h1>The Open Evidence Directory</h1>
+  <p class="lede">Every peer-reviewed study behind the modality — <strong>all in one place, free to open.</strong> Same papers a university researcher would dig for, no login, no library card. Tap any study to read it at the public source. This is the proof, out in the open. You decide.</p>
+  <div class="strip"><span class="chip">37 studies</span><span class="chip">7 research areas</span><span class="chip">$0 to read</span><span class="chip">links to public source</span></div>
+  <p class="lede" style="font-size:.95rem;color:var(--muted);margin-top:14px"><em>These are studies on the underlying modalities (plasma, PEMF, light, breath) — peer-reviewed science, not claims about this specific device. Not intended to diagnose, treat, cure, or prevent any disease.</em></p>
+
+  <div class="grp"><h2>Cold Plasma — Cancer research</h2><span class="cnt">5 studies · early-stage research, not treatment</span>
+    <a class="study" href="https://doi.org/10.1016/j.biomaterials.2024.122582" target="_blank" rel="noopener"><div class="t">Trehalose-enhanced cold atmospheric plasma cancer treatment</div><div class="m"><span class="jr">Biomaterials</span><span>2024</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1016/j.biomaterials.2023.122189" target="_blank" rel="noopener"><div class="t">Injectable CAP-activated immunotherapeutic hydrogel for cancer</div><div class="m"><span class="jr">Biomaterials</span><span>2023</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.18632/oncotarget.13304" target="_blank" rel="noopener"><div class="t">Cold atmospheric plasma, a promising anti-cancer modality</div><div class="m"><span class="jr">Oncotarget</span><span>2017</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.3390/ijms231810238" target="_blank" rel="noopener"><div class="t">Open questions in CAP treatment in head &amp; neck cancer (systematic review)</div><div class="m"><span class="jr">Int J Mol Sci</span><span>2022</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.2174/1381612826666200302105715" target="_blank" rel="noopener"><div class="t">CAP as a novel therapeutic tool for brain cancer</div><div class="m"><span class="jr">Curr Pharm Des</span><span>2020</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+  </div>
+
+  <div class="grp"><h2>Cold Plasma — Wounds, skin &amp; antisepsis</h2><span class="cnt">6 studies</span>
+    <a class="study" href="https://doi.org/10.3390/ijms21082932" target="_blank" rel="noopener"><div class="t">Cold Atmospheric Plasma: A Powerful Tool for Modern Medicine</div><div class="m"><span class="jr">Int J Mol Sci</span><span>2020</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.3390/ijms242316657" target="_blank" rel="noopener"><div class="t">CAP in diabetic wound healing — mechanism &amp; clinical significance</div><div class="m"><span class="jr">Int J Mol Sci</span><span>2023</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1136/bmjopen-2022-066628" target="_blank" rel="noopener"><div class="t">CAP therapy on diabetic foot ulcers (systematic review protocol)</div><div class="m"><span class="jr">BMJ Open</span><span>2023</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1111/odi.15119" target="_blank" rel="noopener"><div class="t">Cold plasma in oral wound healing (scoping review)</div><div class="m"><span class="jr">Oral Dis</span><span>2024</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.4062/biomolther.2014.105" target="_blank" rel="noopener"><div class="t">Non-thermal atmospheric-pressure plasma in wound healing</div><div class="m"><span class="jr">Biomol Ther (Seoul)</span><span>2014</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1159/000481545" target="_blank" rel="noopener"><div class="t">Consensus on Wound Antisepsis: Update 2018</div><div class="m"><span class="jr">Skin Pharmacol Physiol</span><span>2017</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+  </div>
+
+  <div class="grp"><h2>PEMF — Joints, bone &amp; recovery</h2><span class="cnt">8 studies · strongest area for everyday use</span>
+    <a class="study" href="https://doi.org/10.3390/jcm13071959" target="_blank" rel="noopener"><div class="t">Current evidence using PEMF in osteoarthritis (systematic review)</div><div class="m"><span class="jr">J Clin Med</span><span>2024</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1186/s12877-022-03568-5" target="_blank" rel="noopener"><div class="t">Laser vs PEMF for early knee osteoarthritis (RCT)</div><div class="m"><span class="jr">BMC Geriatr</span><span>2023</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.3390/jcm14020594" target="_blank" rel="noopener"><div class="t">Shockwave vs LLLT vs PEMF in knee osteoarthritis (RCT)</div><div class="m"><span class="jr">J Clin Med</span><span>2025</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.2340/16501977-2613" target="_blank" rel="noopener"><div class="t">PEMF on pain, stiffness &amp; function in knee osteoarthritis (meta-analysis)</div><div class="m"><span class="jr">J Rehabil Med</span><span>2019</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.3390/ijms241411239" target="_blank" rel="noopener"><div class="t">PEMF — physiological response &amp; potential in trauma treatment</div><div class="m"><span class="jr">Int J Mol Sci</span><span>2023</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1016/j.rvsc.2018.05.005" target="_blank" rel="noopener"><div class="t">Veterinary applications of PEMF therapy</div><div class="m"><span class="jr">Res Vet Sci</span><span>2018</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1002/14651858.CD003324.pub3" target="_blank" rel="noopener"><div class="t">Rehabilitation for distal radial fractures in adults (Cochrane)</div><div class="m"><span class="jr">Cochrane Database Syst Rev</span><span>2015</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1007/s40279-013-0087-0" target="_blank" rel="noopener"><div class="t">Treatment of medial tibial stress syndrome (systematic review)</div><div class="m"><span class="jr">Sports Med</span><span>2013</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+  </div>
+
+  <div class="grp"><h2>Light &amp; Laser (Photobiomodulation)</h2><span class="cnt">6 studies</span>
+    <a class="study" href="https://doi.org/10.1007/s10439-011-0454-7" target="_blank" rel="noopener"><div class="t">The nuts and bolts of low-level laser (light) therapy</div><div class="m"><span class="jr">Ann Biomed Eng</span><span>2011</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1016/j.jaad.2023.10.073" target="_blank" rel="noopener"><div class="t">Photobiomodulation CME part I — overview &amp; mechanism</div><div class="m"><span class="jr">J Am Acad Dermatol</span><span>2024</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.3390/ijms24087094" target="_blank" rel="noopener"><div class="t">Role of low-level laser therapy in bone healing (systematic review)</div><div class="m"><span class="jr">Int J Mol Sci</span><span>2023</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.7150/ijms.85746" target="_blank" rel="noopener"><div class="t">Repeated low-level red-light therapy for myopia (review)</div><div class="m"><span class="jr">Int J Med Sci</span><span>2023</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1080/08164622.2021.1878866" target="_blank" rel="noopener"><div class="t">Photobiomodulation &amp; dry eye disease</div><div class="m"><span class="jr">Clin Exp Optom</span><span>2021</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1007/s00520-016-3153-y" target="_blank" rel="noopener"><div class="t">PBM in side effects of chemoradiation, head &amp; neck cancer (part 2)</div><div class="m"><span class="jr">Support Care Cancer</span><span>2016</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+  </div>
+
+  <div class="grp"><h2>The Breath — Slow breathing &amp; HRV</h2><span class="cnt">5 studies · the science under Alchemy Breath</span>
+    <a class="study" href="https://doi.org/10.1016/j.neubiorev.2022.104711" target="_blank" rel="noopener"><div class="t">Voluntary slow breathing on heart rate &amp; HRV (systematic review + meta-analysis)</div><div class="m"><span class="jr">Neurosci Biobehav Rev</span><span>2022</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1016/j.neubiorev.2022.104576" target="_blank" rel="noopener"><div class="t">HRV &amp; slow-paced breathing: when coherence meets resonance</div><div class="m"><span class="jr">Neurosci Biobehav Rev</span><span>2022</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.3389/fnhum.2018.00353" target="_blank" rel="noopener"><div class="t">How breath-control can change your life (systematic review)</div><div class="m"><span class="jr">Front Hum Neurosci</span><span>2018</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1007/s13760-025-02789-w" target="_blank" rel="noopener"><div class="t">Breathe better, live better: the science of slow breathing &amp; HRV</div><div class="m"><span class="jr">Acta Neurol Belg</span><span>2025</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.4103/asl.ASL_178_16" target="_blank" rel="noopener"><div class="t">Effects of breathing practices on cardiovascular &amp; autonomic variables</div><div class="m"><span class="jr">Anc Sci Life</span><span>2016</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+  </div>
+
+  <div class="grp"><h2>Reactive species &amp; ozone</h2><span class="cnt">4 studies</span>
+    <a class="study" href="https://doi.org/10.4103/2045-9912.215752" target="_blank" rel="noopener"><div class="t">Ozone therapy: pharmacodynamics, research &amp; clinical utility</div><div class="m"><span class="jr">Med Gas Res</span><span>2017</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.2147/JAA.S529371" target="_blank" rel="noopener"><div class="t">Reactive oxygen species in asthma — macrophage polarization (review)</div><div class="m"><span class="jr">J Asthma Allergy</span><span>2025</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1186/s40659-024-00547-5" target="_blank" rel="noopener"><div class="t">Ozone therapy mitigates parthanatos after ischemic stroke</div><div class="m"><span class="jr">Biol Res</span><span>2024</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1016/j.amjms.2020.05.012" target="_blank" rel="noopener"><div class="t">Ozone therapy for foot ulcers in diabetes (overview)</div><div class="m"><span class="jr">Am J Med Sci</span><span>2020</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+  </div>
+
+  <div class="grp"><h2>Brain &amp; nervous system</h2><span class="cnt">3 studies</span>
+    <a class="study" href="https://doi.org/10.1176/appi.ajp.20240859" target="_blank" rel="noopener"><div class="t">Treating depression with repetitive transcranial magnetic stimulation (clinician's guide)</div><div class="m"><span class="jr">Am J Psychiatry</span><span>2025</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://doi.org/10.1016/j.plrev.2025.02.002" target="_blank" rel="noopener"><div class="t">Human perception of ionizing radiation</div><div class="m"><span class="jr">Phys Life Rev</span><span>2025</span><span class="doi">DOI ↗</span><span class="free">free</span></div></a>
+    <a class="study" href="https://pubmed.ncbi.nlm.nih.gov/?term=neck+pain+BMJ+clinical+evidence" target="_blank" rel="noopener"><div class="t">Neck pain — interventions incl. PEMF (systematic review)</div><div class="m"><span class="jr">BMJ Clin Evid</span><span>2008</span><span class="doi">PubMed ↗</span><span class="free">free</span></div></a>
+  </div>
+</div>
+
+<footer>Every link opens the public source. No login. No paywall. · <a href="index.html" style="color:var(--cyan)">← back to Scalar OS</a><br><span style="font-size:.8rem">Peer-reviewed research on the underlying modalities — not claims about this specific device. Not intended to diagnose, treat, cure, or prevent any disease.</span></footer>
+</body>
+</html>
