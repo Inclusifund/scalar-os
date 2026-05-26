@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>You're in — Scalar Breath App</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#070410;--plasma:#6B2BD6;--cyan:#00E5FF;--gold:#FFB800;--pale-gold:#FFE8A8;--text:#ECE6F5;--muted:#9A8FB5;
+    --stroke:rgba(255,255,255,.14);--stroke2:rgba(255,255,255,.07);--ok:#46d39a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-weight:300;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .bgvid{position:fixed;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) brightness(.45)}
+  .veil{position:fixed;inset:0;z-index:1;background:radial-gradient(130% 100% at 50% 26%,rgba(10,6,16,.5),rgba(7,4,16,.92) 70%,rgba(7,4,16,.97) 100%)}
+  .wrap{position:relative;z-index:5;max-width:560px;margin:0 auto;padding:54px 22px 70px;text-align:center;min-height:100dvh;display:flex;flex-direction:column;justify-content:center}
+  .check{width:74px;height:74px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;font-size:36px;color:#04201e;
+    background:linear-gradient(135deg,var(--ok),#7fe9c0);box-shadow:0 0 50px rgba(70,211,154,.4)}
+  .badge{display:inline-flex;align-self:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ok);margin-bottom:14px}
+  h1{font-family:Cinzel;font-weight:700;font-size:clamp(1.9rem,6vw,2.7rem);line-height:1.06;margin-bottom:12px;
+    background:linear-gradient(150deg,#fff 34%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:1.08rem;color:#e6e0f2;max-width:44ch;margin:0 auto 6px}
+  .sub strong{color:#fff}
+  .divider{display:flex;align-items:center;gap:14px;margin:34px 0 22px;color:var(--muted);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+  .divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--stroke2)}
+  .oto{background:rgba(255,255,255,.05);border:1.5px solid var(--gold);border-radius:18px;padding:26px 24px;text-align:left;box-shadow:0 14px 40px rgba(255,184,0,.12)}
+  .oto .tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .oto h2{font-family:Cinzel;font-weight:600;font-size:1.45rem;color:#fff;margin:8px 0 10px;line-height:1.15}
+  .oto p{font-size:15px;color:#dcd5ea;line-height:1.6;margin-bottom:8px}
+  .oto .credit{font-size:13px;color:var(--ok);margin-bottom:18px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;font-weight:700;font-size:16px;cursor:pointer;padding:16px 22px;border-radius:13px;border:0;
+    background:linear-gradient(135deg,var(--gold),#ffd061);color:#2a1e02;box-shadow:0 8px 26px rgba(255,184,0,.32);transition:.18s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(255,184,0,.5)}
+  .btn2{display:block;width:100%;margin-top:12px;padding:14px;border-radius:13px;border:1px solid var(--stroke);background:rgba(255,255,255,.05);color:var(--text);font-weight:600;font-size:15px;transition:.18s}
+  .btn2:hover{border-color:var(--cyan)}
+  .skip{display:inline-block;margin-top:20px;color:var(--muted);font-size:14px;border-bottom:1px solid var(--stroke2)}
+  .skip:hover{color:var(--text)}
+  .foot{margin-top:30px;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<video class="bgvid" autoplay muted loop playsinline poster="assets/bg-poster.jpeg"><source src="assets/bg.mp4" type="video/mp4"></video>
+<div class="veil"></div>
+
+<div class="wrap">
+  <div class="check">✓</div>
+  <span class="badge">You're on the list</span>
+  <h1>You're in. You'll get it first.</h1>
+  <p class="sub">Your founder spot for the Scalar Breath App is <strong>locked</strong> — founder pricing held, first access when it drops. We'll email you the moment early access opens.</p>
+
+  <div class="divider">One thing only the list gets</div>
+
+  <div class="oto">
+    <span class="tag">Founder fast-track</span>
+    <h2>Don't just wait — start with Devon.</h2>
+    <p>The list gets first call. A <strong>$45 discovery</strong> with Devon: we figure out your path with the breath, the projector and the field — and it's <strong>credited to whatever you choose next</strong>.</p>
+    <p class="credit">◇ Risk-free — the $45 comes off your next step. No pressure, no big leap.</p>
+    <a class="btn" href="https://scalarplasmaprojector.com/os#work">Book my $45 discovery →</a>
+    <a class="btn2" href="https://scalarplasmaprojector.com/os#projector">Or see the projector + the evidence →</a>
+  </div>
+
+  <a class="skip" href="https://scalarplasmaprojector.com/os">Skip — just take me into the Scalar OS</a>
+  <div class="foot">Bend the field. Bend the breath.</div>
+</div>
+</body>
+</html>
