@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Scalar Breath App — Early Access (Invite Only)</title>
-<meta name="description" content="You're in early. Reserve your spot for the Scalar Breath App before it drops publicly — founder pricing, first access.">
+<title>Secure Your Space — Scalar Breath App (Invite Only)</title>
+<meta name="description" content="The list sees this first. Secure your space in the Scalar Breath App before the public drop — 3-month, lifetime, or lifetime MAX.">
 <meta name="theme-color" content="#0A0610">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,40 +15,43 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-weight:300;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   .cinzel{font-family:Cinzel,serif} a{color:inherit;text-decoration:none}
-  .bgvid{position:fixed;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) brightness(.5)}
-  .veil{position:fixed;inset:0;z-index:1;background:radial-gradient(130% 100% at 50% 26%,rgba(10,6,16,.45),rgba(7,4,16,.9) 70%,rgba(7,4,16,.97) 100%)}
-  .wrap{position:relative;z-index:5;max-width:600px;margin:0 auto;padding:46px 22px 70px;text-align:center;min-height:100dvh;display:flex;flex-direction:column;justify-content:center}
-  .badge{display:inline-flex;align-items:center;gap:8px;align-self:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--gold);border:1px solid rgba(255,184,0,.35);border-radius:999px;padding:7px 16px;margin-bottom:26px}
-  /* orb */
-  .orb3d{position:relative;width:150px;height:150px;margin:0 auto 22px;border-radius:50%;overflow:hidden;
-    background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.55) 0%,transparent 26%),radial-gradient(circle at 50% 54%,rgba(0,229,255,.5) 0%,rgba(107,43,214,.6) 40%,rgba(42,14,92,.9) 72%,rgba(10,6,16,.96) 100%);
-    box-shadow:inset 0 0 40px rgba(107,43,214,.55),inset -10px -14px 40px rgba(10,6,16,.85),0 0 55px rgba(107,43,214,.5),0 0 110px rgba(0,229,255,.18);animation:breath 7s ease-in-out infinite}
-  .orb3d .core{position:absolute;inset:13%;border-radius:50%;filter:blur(7px);background:conic-gradient(from 0deg,transparent,rgba(255,184,0,.55),rgba(0,229,255,.45),rgba(107,43,214,.6),transparent);
-    -webkit-mask:radial-gradient(circle,#000 56%,transparent 72%);mask:radial-gradient(circle,#000 56%,transparent 72%);animation:spin 16s linear infinite}
-  .orb3d .sheen{position:absolute;left:22%;top:13%;width:42%;height:30%;border-radius:50%;filter:blur(5px);background:radial-gradient(ellipse at center,rgba(255,255,255,.55),transparent 70%)}
-  @keyframes breath{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  h1{font-family:Cinzel;font-weight:700;font-size:clamp(2.1rem,6.5vw,3.1rem);line-height:1.05;letter-spacing:-.5px;margin-bottom:14px;
-    background:linear-gradient(150deg,#fff 30%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .sub{font-size:1.15rem;color:#e6e0f2;max-width:46ch;margin:0 auto 8px}
+  .bgvid{position:fixed;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) brightness(.42)}
+  .veil{position:fixed;inset:0;z-index:1;background:radial-gradient(130% 100% at 50% 18%,rgba(10,6,16,.5),rgba(7,4,16,.93) 72%,rgba(7,4,16,.98) 100%)}
+  .wrap{position:relative;z-index:5;max-width:680px;margin:0 auto;padding:46px 20px 70px;text-align:center}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold);border:1px solid rgba(255,184,0,.35);border-radius:999px;padding:7px 16px;margin-bottom:22px}
+  h1{font-family:Cinzel;font-weight:700;font-size:clamp(2.2rem,7vw,3.3rem);line-height:1.04;letter-spacing:-.5px;margin-bottom:14px;
+    background:linear-gradient(150deg,#fff 32%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:1.15rem;color:#e6e0f2;max-width:50ch;margin:0 auto}
   .sub strong{color:#fff}
-  .feats{list-style:none;margin:26px auto 8px;max-width:420px;text-align:left}
-  .feats li{font-size:15px;color:#dcd5ea;padding:9px 0 9px 30px;position:relative;border-bottom:1px solid var(--stroke2)}
-  .feats li::before{content:"◇";position:absolute;left:6px;color:var(--gold)}
-  .price-line{font-family:Cinzel;font-size:1.05rem;color:var(--pale-gold);margin:22px 0 6px}
-  .price-line s{color:var(--muted);font-family:Inter;font-size:.9rem}
-  form{display:flex;gap:8px;flex-wrap:wrap;max-width:440px;margin:14px auto 0}
-  input{flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid var(--stroke);border-radius:12px;padding:15px 16px;color:var(--text);font-size:15px;font-family:Inter}
-  input:focus{outline:none;border-color:var(--cyan);background:rgba(255,255,255,.09)}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:15px;cursor:pointer;padding:15px 24px;border-radius:12px;border:0;
-    background:linear-gradient(135deg,var(--gold),#ffd061);color:#2a1e02;box-shadow:0 8px 26px rgba(255,184,0,.3);transition:.18s}
-  .btn:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(255,184,0,.45)}
-  .msg{font-size:14px;color:var(--ok);min-height:20px;margin-top:12px}
-  .fine{font-size:12px;color:var(--muted);margin-top:18px;font-style:italic}
-  .foot{margin-top:30px;font-size:13px;color:var(--muted)}
+  .dest{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin:18px 0 6px}
+  .tiers{display:grid;gap:16px;margin-top:30px;text-align:left}
+  @media(min-width:760px){.tiers{grid-template-columns:1fr 1fr 1fr;align-items:start}}
+  .tier{background:rgba(255,255,255,.045);border:1px solid var(--stroke);border-radius:18px;padding:26px 22px;position:relative;display:flex;flex-direction:column}
+  .tier.feature{border:1.5px solid var(--gold);box-shadow:0 14px 40px rgba(255,184,0,.14)}
+  .flag{position:absolute;top:-12px;left:22px;background:linear-gradient(135deg,var(--gold),#ffd061);color:#2a1e02;font-family:'Space Mono',monospace;
+    font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;font-weight:700}
+  .tier h3{font-family:Cinzel;font-weight:600;font-size:1.2rem;color:#fff;margin-bottom:4px}
+  .tier .lede{font-size:13px;color:var(--muted);min-height:34px}
+  .price{font-family:Cinzel;font-size:2.3rem;color:#fff;margin:10px 0 2px}
+  .price small{font-size:13px;color:var(--muted);font-family:Inter}
+  .tier ul{list-style:none;margin:14px 0 18px;flex:1}
+  .tier li{font-size:14px;color:#dcd5ea;padding:6px 0 6px 22px;position:relative;line-height:1.4}
+  .tier li::before{content:"◇";position:absolute;left:0;color:var(--gold)}
+  .btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;font-weight:700;font-size:15px;cursor:pointer;padding:15px 18px;border-radius:12px;border:1px solid var(--stroke);background:rgba(255,255,255,.06);color:var(--text);transition:.18s}
+  .btn:hover{transform:translateY(-2px);border-color:var(--cyan)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),#ffd061);color:#2a1e02;border-color:transparent;box-shadow:0 8px 26px rgba(255,184,0,.3)}
+  .scarcity{margin-top:24px;font-family:'Space Mono',monospace;font-size:12px;color:var(--cyan);letter-spacing:.05em}
+  .how{margin-top:14px;font-size:13px;color:var(--muted);max-width:48ch;margin-left:auto;margin-right:auto}
+  .free{margin-top:36px;padding-top:26px;border-top:1px solid var(--stroke2)}
+  .free p{font-size:14px;color:var(--muted);margin-bottom:12px}
+  form{display:flex;gap:8px;flex-wrap:wrap;max-width:420px;margin:0 auto}
+  input{flex:1;min-width:190px;background:rgba(255,255,255,.06);border:1px solid var(--stroke);border-radius:12px;padding:13px 16px;color:var(--text);font-size:15px;font-family:Inter}
+  input:focus{outline:none;border-color:var(--cyan)}
+  .free .btn{width:auto;padding:13px 20px}
+  .msg{font-size:13px;color:var(--ok);min-height:18px;margin-top:10px}
+  .foot{margin-top:30px;font-size:12px;color:var(--muted)}
   .foot a{color:var(--cyan)}
-  .spots{font-family:'Space Mono',monospace;font-size:12px;color:var(--cyan);margin-top:10px;letter-spacing:.05em}
 </style>
 </head>
 <body>
@@ -56,37 +59,79 @@
 <div class="veil"></div>
 
 <div class="wrap">
-  <span class="badge">● Invite only · you're in early</span>
-  <h1>Get the Scalar<br>Breath App first.</h1>
-  <p class="sub">You're on the list — so you get it <strong>before the public drop</strong>. The breath, the orb, the field, guided in your pocket. Reserve your founder spot in 10 seconds.</p>
+  <span class="badge">● Invite only · the list sees this first</span>
+  <h1>Secure your space.</h1>
+  <p class="sub">The Scalar Breath App drops to the public soon. <strong>You're on the list — so you get in first, at founder pricing.</strong> Claim your place now; your account activates the day it goes live.</p>
+  <p class="dest">Destination → lifetime in the field</p>
 
-  <ul class="feats">
-    <li><strong>First access</strong> — the day it goes live, you're already in</li>
-    <li><strong>Founder pricing</strong> — locked, lower than the public price, for life</li>
-    <li>Guided Ground → Build → Bend sessions with the live orb</li>
-    <li>Your breath data + the field, private to you</li>
-  </ul>
+  <div class="tiers">
+    <div class="tier">
+      <h3>3-Month Access</h3>
+      <p class="lede">Get in the moment it drops.</p>
+      <div class="price">$97</div>
+      <ul>
+        <li>3 months full access from drop date</li>
+        <li>Your account activated in the live app</li>
+        <li>Founder pricing locked in</li>
+      </ul>
+      <a class="btn" data-pay="app-3mo-97" href="#">Secure 3 months — $97</a>
+    </div>
 
-  <p class="price-line">Founder price locked in <s>public price set at launch</s></p>
+    <div class="tier">
+      <h3>Lifetime</h3>
+      <p class="lede">Never pay again.</p>
+      <div class="price">$347</div>
+      <ul>
+        <li>Lifetime access</li>
+        <li>All standard updates</li>
+        <li><strong>Projector discount</strong> for lifetime members</li>
+      </ul>
+      <a class="btn gold" data-pay="app-lifetime-347" href="#">Go lifetime — $347</a>
+    </div>
 
-  <form onsubmit="return reserve(event)">
-    <input id="r-email" type="email" required placeholder="your email">
-    <button class="btn" type="submit">Reserve my early spot →</button>
-  </form>
-  <p class="msg" id="r-msg"></p>
-  <p class="spots" id="spots">◇ Early founder spots are limited</p>
+    <div class="tier feature">
+      <span class="flag">Founder · 50 seats</span>
+      <h3>Lifetime MAX</h3>
+      <p class="lede">Everything, forever, first.</p>
+      <div class="price">$997</div>
+      <ul>
+        <li>Lifetime access — <strong>all</strong> updates</li>
+        <li>Entered to test new products before launch</li>
+        <li>Projector discount for lifetime members</li>
+        <li>Founder-lifetime status</li>
+      </ul>
+      <a class="btn gold" data-pay="app-lifetimemax-997" href="#">Claim a founder seat — $997</a>
+    </div>
+  </div>
 
-  <p class="fine">No charge today — you're reserving your place + founder pricing. We'll email you the moment early access opens.</p>
+  <p class="scarcity" id="scarcity">◇ Only 50 founder lifetime seats — once they're gone, they're gone</p>
+  <p class="how">How it works: pay now to lock your place + founder pricing. Your login activates in the live app on launch day — we email you the moment it's ready.</p>
+
+  <div class="free">
+    <p>Not ready to commit? Stay on the free list and you'll still hear first.</p>
+    <form onsubmit="return freeList(event)">
+      <input id="f-email" type="email" required placeholder="your email">
+      <button class="btn" type="submit">Keep me posted →</button>
+    </form>
+    <p class="msg" id="f-msg"></p>
+  </div>
+
   <div class="foot">Bend the field. Bend the breath. · <a href="index.html">← Scalar OS</a></div>
 </div>
 
 <script>
-  window.reserve=function(e){e.preventDefault();
-    var v=(document.getElementById('r-email').value||'').trim(); if(!v) return false;
-    try{fetch('https://famous-antelope-118.convex.site/signup',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v,list:'app-early',source:'presell'})});}catch(_){}
-    try{localStorage.setItem('scalar-app-email',v);}catch(_){}
-    document.getElementById('r-msg').textContent="✓ Reserving your spot…";
-    window.location.href='reserved.html?e='+encodeURIComponent(v);
+  var CONVEX="https://famous-antelope-118.convex.site/signup";
+  // tier buy buttons — Stripe links slot in once Devon's key has Products+Prices+PaymentLinks write
+  document.querySelectorAll('[data-pay]').forEach(function(el){el.addEventListener('click',function(e){
+    if(el.getAttribute('href')==='#'){e.preventDefault();alert('Payment link pending — goes live the moment Devon finishes the Stripe permissions ('+el.dataset.pay+').');}
+  });});
+  // free fallback → Convex capture → confirm
+  window.freeList=function(e){e.preventDefault();
+    var v=(document.getElementById('f-email').value||'').trim(); if(!v) return false;
+    var b=document.getElementById('f-msg'); b.textContent="Adding you…";
+    fetch(CONVEX,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v,list:'free-list',source:'presell-free'})})
+      .then(function(r){return r.json();}).then(function(){b.textContent="✓ You're on the list — we'll email you first.";})
+      .catch(function(){b.textContent="✓ You're on the list.";});
     return false;};
 </script>
 </body>
