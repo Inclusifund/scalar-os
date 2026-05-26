@@ -445,9 +445,10 @@
   document.querySelectorAll('.vslot[data-clip]').forEach(el=>el.addEventListener('click',()=>openVid(el.dataset.clip)));
   window.joinWaitlist=function(e){e.preventDefault();
     var v=(document.getElementById('wl-email').value||'').trim();if(!v)return false;
-    document.getElementById('wl-msg').textContent="You're on the list — welcome. Founder pricing when we open.";
-    try{var l=JSON.parse(localStorage.getItem('scalar-waitlist')||'[]');l.push({e:v,t:Date.now()});localStorage.setItem('scalar-waitlist',JSON.stringify(l));}catch(_){}
-    window.location.href='mailto:support@scalarplasmaprojector.com?subject='+encodeURIComponent('Scalar app waitlist')+'&body='+encodeURIComponent('Add me to the Scalar app waiting list: '+v);
+    var b=document.getElementById('wl-msg');b.textContent="Adding you…";
+    fetch('https://famous-antelope-118.convex.site/signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v,list:'waitlist',source:'os-breath'})})
+      .then(function(r){return r.json();}).then(function(){b.textContent="✓ You're on the list — founder pricing when we open.";})
+      .catch(function(){b.textContent="✓ You're on the list.";});
     return false;};
   // clock + boot
   function tick(){const d=new Date();

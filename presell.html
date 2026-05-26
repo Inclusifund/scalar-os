@@ -83,7 +83,8 @@
 <script>
   window.reserve=function(e){e.preventDefault();
     var v=(document.getElementById('r-email').value||'').trim(); if(!v) return false;
-    try{localStorage.setItem('scalar-app-email',v);var l=JSON.parse(localStorage.getItem('scalar-app-presell')||'[]');l.push({e:v,t:Date.now()});localStorage.setItem('scalar-app-presell',JSON.stringify(l));}catch(_){}
+    try{fetch('https://famous-antelope-118.convex.site/signup',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v,list:'app-early',source:'presell'})});}catch(_){}
+    try{localStorage.setItem('scalar-app-email',v);}catch(_){}
     document.getElementById('r-msg').textContent="✓ Reserving your spot…";
     window.location.href='reserved.html?e='+encodeURIComponent(v);
     return false;};
