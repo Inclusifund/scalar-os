@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Scalar Breath App — Early Access (Invite Only)</title>
+<meta name="description" content="You're in early. Reserve your spot for the Scalar Breath App before it drops publicly — founder pricing, first access.">
+<meta name="theme-color" content="#0A0610">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#070410;--plasma:#6B2BD6;--cyan:#00E5FF;--gold:#FFB800;--pale-gold:#FFE8A8;--text:#ECE6F5;--muted:#9A8FB5;
+    --stroke:rgba(255,255,255,.14);--stroke2:rgba(255,255,255,.07);--ok:#46d39a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-weight:300;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .cinzel{font-family:Cinzel,serif} a{color:inherit;text-decoration:none}
+  .bgvid{position:fixed;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) brightness(.5)}
+  .veil{position:fixed;inset:0;z-index:1;background:radial-gradient(130% 100% at 50% 26%,rgba(10,6,16,.45),rgba(7,4,16,.9) 70%,rgba(7,4,16,.97) 100%)}
+  .wrap{position:relative;z-index:5;max-width:600px;margin:0 auto;padding:46px 22px 70px;text-align:center;min-height:100dvh;display:flex;flex-direction:column;justify-content:center}
+  .badge{display:inline-flex;align-items:center;gap:8px;align-self:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--gold);border:1px solid rgba(255,184,0,.35);border-radius:999px;padding:7px 16px;margin-bottom:26px}
+  /* orb */
+  .orb3d{position:relative;width:150px;height:150px;margin:0 auto 22px;border-radius:50%;overflow:hidden;
+    background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.55) 0%,transparent 26%),radial-gradient(circle at 50% 54%,rgba(0,229,255,.5) 0%,rgba(107,43,214,.6) 40%,rgba(42,14,92,.9) 72%,rgba(10,6,16,.96) 100%);
+    box-shadow:inset 0 0 40px rgba(107,43,214,.55),inset -10px -14px 40px rgba(10,6,16,.85),0 0 55px rgba(107,43,214,.5),0 0 110px rgba(0,229,255,.18);animation:breath 7s ease-in-out infinite}
+  .orb3d .core{position:absolute;inset:13%;border-radius:50%;filter:blur(7px);background:conic-gradient(from 0deg,transparent,rgba(255,184,0,.55),rgba(0,229,255,.45),rgba(107,43,214,.6),transparent);
+    -webkit-mask:radial-gradient(circle,#000 56%,transparent 72%);mask:radial-gradient(circle,#000 56%,transparent 72%);animation:spin 16s linear infinite}
+  .orb3d .sheen{position:absolute;left:22%;top:13%;width:42%;height:30%;border-radius:50%;filter:blur(5px);background:radial-gradient(ellipse at center,rgba(255,255,255,.55),transparent 70%)}
+  @keyframes breath{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  h1{font-family:Cinzel;font-weight:700;font-size:clamp(2.1rem,6.5vw,3.1rem);line-height:1.05;letter-spacing:-.5px;margin-bottom:14px;
+    background:linear-gradient(150deg,#fff 30%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:1.15rem;color:#e6e0f2;max-width:46ch;margin:0 auto 8px}
+  .sub strong{color:#fff}
+  .feats{list-style:none;margin:26px auto 8px;max-width:420px;text-align:left}
+  .feats li{font-size:15px;color:#dcd5ea;padding:9px 0 9px 30px;position:relative;border-bottom:1px solid var(--stroke2)}
+  .feats li::before{content:"◇";position:absolute;left:6px;color:var(--gold)}
+  .price-line{font-family:Cinzel;font-size:1.05rem;color:var(--pale-gold);margin:22px 0 6px}
+  .price-line s{color:var(--muted);font-family:Inter;font-size:.9rem}
+  form{display:flex;gap:8px;flex-wrap:wrap;max-width:440px;margin:14px auto 0}
+  input{flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid var(--stroke);border-radius:12px;padding:15px 16px;color:var(--text);font-size:15px;font-family:Inter}
+  input:focus{outline:none;border-color:var(--cyan);background:rgba(255,255,255,.09)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:15px;cursor:pointer;padding:15px 24px;border-radius:12px;border:0;
+    background:linear-gradient(135deg,var(--gold),#ffd061);color:#2a1e02;box-shadow:0 8px 26px rgba(255,184,0,.3);transition:.18s}
+  .btn:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(255,184,0,.45)}
+  .msg{font-size:14px;color:var(--ok);min-height:20px;margin-top:12px}
+  .fine{font-size:12px;color:var(--muted);margin-top:18px;font-style:italic}
+  .foot{margin-top:30px;font-size:13px;color:var(--muted)}
+  .foot a{color:var(--cyan)}
+  .spots{font-family:'Space Mono',monospace;font-size:12px;color:var(--cyan);margin-top:10px;letter-spacing:.05em}
+</style>
+</head>
+<body>
+<video class="bgvid" autoplay muted loop playsinline poster="assets/bg-poster.jpeg"><source src="assets/bg.mp4" type="video/mp4"></video>
+<div class="veil"></div>
+
+<div class="wrap">
+  <span class="badge">● Invite only · you're in early</span>
+  <div class="orb3d"><div class="core"></div><div class="sheen"></div></div>
+  <h1>Get the Scalar<br>Breath App first.</h1>
+  <p class="sub">You're on the list — so you get it <strong>before the public drop</strong>. The breath, the orb, the field, guided in your pocket.</p>
+
+  <ul class="feats">
+    <li><strong>First access</strong> — the day it goes live, you're already in</li>
+    <li><strong>Founder pricing</strong> — locked, lower than the public price, for life</li>
+    <li>Guided Ground → Build → Bend sessions with the live orb</li>
+    <li>Your breath data + the field, private to you</li>
+  </ul>
+
+  <p class="price-line">Founder price locked in <s>public price set at launch</s></p>
+
+  <form onsubmit="return reserve(event)">
+    <input id="r-email" type="email" required placeholder="your email">
+    <button class="btn" type="submit">Reserve my early spot →</button>
+  </form>
+  <p class="msg" id="r-msg"></p>
+  <p class="spots" id="spots">◇ Early founder spots are limited</p>
+
+  <p class="fine">No charge today — you're reserving your place + founder pricing. We'll email you the moment early access opens.</p>
+  <div class="foot">Bend the field. Bend the breath. · <a href="index.html">← Scalar OS</a></div>
+</div>
+
+<script>
+  window.reserve=function(e){e.preventDefault();
+    var v=(document.getElementById('r-email').value||'').trim(); if(!v) return false;
+    document.getElementById('r-msg').textContent="✓ You're reserved — welcome in early. Watch your inbox.";
+    try{var l=JSON.parse(localStorage.getItem('scalar-app-presell')||'[]');l.push({e:v,t:Date.now()});localStorage.setItem('scalar-app-presell',JSON.stringify(l));}catch(_){}
+    window.location.href='mailto:support@scalarplasmaprojector.com?subject='+encodeURIComponent('Scalar Breath App — early access')+'&body='+encodeURIComponent('Reserve my early founder spot for the Scalar Breath App: '+v);
+    return false;};
+</script>
+</body>
+</html>
